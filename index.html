@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <style>
+        .fruits-container li{
+            color: blue;
+        }
+        #fruits-title {
+            color: black;
+        }
+        .important-places {
+            color: rgb(85, 76, 214);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+    </header>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quaerat eum ad omnis explicabo at obcaecati id sint? Possimus earum quod doloremque cum cupiditate deleniti quae. Expedita nostrum id aliquid!
+    </p>
+    <main id="main-container">
+        <section>
+            <h1>MY Awesome DOM de baba</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Shafayet</li>
+            <li>bono</li>
+        </ul>
+        </section>
+        
+        <section id="fruits-container" class="bg">
+            <h1 id="fruits-title" class="fruits some-fruits favorit-fruits">Fruits I like</h1>
+            <ul id="fruits">
+                <li>Apple</li>
+                <li>Bannana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+
+        <section id="places-container">
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul id="place-list">
+                <li class="important-places">Sundorban</li>
+                <li class="important-places">Cox'Bazar</li>
+                <li class="important-places">Shylet</li>
+                <li>Rajsahi</li>
+            </ul>
+        </section>
+    </main>
+    <script src="JS/dom.js"></script>
+    <script src="JS/styleinjs.js"></script>
+    <script src="JS/append.js"></script>
+    <script>
+        const fruitsUl = document.getElementById('fruits');
+        const newFruit = document.createElement('li');
+        newFruit.innerText = 'Goyava';
+        fruitsUl.appendChild(newFruit);
+        const someLi = document.querySelectorAll('.fruits-container li');
+        for (const li of someLi){
+            // console.log(li.innerText)
+        }
+    </script>
+</body>
+</html>
